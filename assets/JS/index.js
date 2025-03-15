@@ -1,5 +1,6 @@
 
 let containerlist=document.querySelector("#productlist")
+let spinner=document.querySelector(".spinner")
 axios(`https://fakestoreapi.com/products`).then((res)=>{
    res.data.forEach(element => {
        containerlist.innerHTML +=
@@ -35,7 +36,7 @@ axios(`https://fakestoreapi.com/products`).then((res)=>{
     </table>
 </div>
        `
-       
+       spinner.classList.replace("d-flex","d-none")
        
    });
 })
